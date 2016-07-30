@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title WebInterface
+    = csrf_meta_tags
+    link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" rel="stylesheet" /
+    link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,700,800,400italic,600,600italic,700italic,800italic' rel='stylesheet' type='text/css'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'    
+  body
+    .container-fluid
+      .row
+        .col-md-12
+          = render 'layouts/menu'
+      .row
+        .col-md-12
+          = yield
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    script crossorigin="anonymous" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" 
+    script crossorigin="anonymous" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" 
+    script crossorigin="anonymous" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" 

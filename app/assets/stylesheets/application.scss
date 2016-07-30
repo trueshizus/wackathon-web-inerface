@@ -1,0 +1,59 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'colors';
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,700,800,400italic,600,600italic,700italic,800italic);
+/* Bootstrap overrides */
+
+.bg-faded {
+  background-color: $primary-color;
+}
+
+/* Layout */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to(#797BB7)) fixed;
+  color: white;
+}
+
+/*Styles */
+
+.main-nav {
+  padding: 50px 0;
+  >ul {
+    display: flex;
+
+    >li {
+      width: 150px;
+      text-align: center;
+      padding-bottom: 15px;
+      cursor: pointer;
+      &:hover {
+        border-bottom: white 2px solid;
+      }
+      &.active {
+        border-bottom: white 2px solid;
+      }
+    }
+  }
+}
+
+.main-section, .messages-section {
+  background-color: $panel-color;
+  height: 100%;
+}
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1b025e+0,1b025e+38,7380d6+100 */
