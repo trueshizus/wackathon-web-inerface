@@ -1,8 +1,16 @@
 nav.main-nav
   ul.list-unstyled
-    li.active
-      a Dashboard
-    li
-      a Quests
-    li
-      a Market
+    li(class="#{'active' if current_page?('/')}")
+      a(href="/") General
+    li(class="#{'active' if current_page?('/quests')}")
+      a(href="/quests") Desafios
+    li(class="#{'active' if current_page?('/market')}")
+      a(href="/market") Tienda
+    li(class="#{'active' if current_page?('/stats')}")
+      a(href="/stats") Estadísticas
+  .user-section
+    .profile-image
+    .profile-data
+      h3.name Shizus
+      a.option Salir
+    

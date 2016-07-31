@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require font-awesome
  *= require_self
  */
 
@@ -23,24 +24,73 @@
   background-color: $primary-color;
 }
 
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.card {
+  background-color: $panel-color;
+  margin: 10px;
+}
+
+.card-img-top {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.btn-custom {
+  border-radius: 0;
+  background-color: $panel-color;
+}
+
+.list-group-item { color: white }
+.list-group-item-action { background-color: $panel-color }
+.active { background-color: $panel-color  }
+
+
 /* Layout */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
   background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to(#797BB7)) fixed;
   color: white;
+
 }
+
+h2 {
+  padding: 15px;
+}
+
+.list-group-item-action .list-group-item-heading { color: white; }
+h5 { color: white; }
+
+.list-group-item.active { background-color: $panel-color }
 
 /*Styles */
 
 .main-nav {
-  padding: 50px 0;
+  margin: 10px 0;
+  display: flex;
+  align-items:stretch;
+  border-bottom: white solid 1px;
   >ul {
     display: flex;
-
+    align-items:stretch;
+    margin: 0;
     >li {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      line-height: 80px;
       width: 150px;
       text-align: center;
-      padding-bottom: 15px;
       cursor: pointer;
       &:hover {
         border-bottom: white 2px solid;
@@ -50,10 +100,57 @@ body {
       }
     }
   }
+
+  .user-section {
+    margin-left: auto;
+    display: flex;
+    padding-right: 50px;
+    padding: 10px 75px 10px 20px;
+
+    .profile-image {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      background: #ccc;
+      border: 3px solid $panel-color;
+      padding-right: 15px;
+      margin-right: 30px;
+    }
+
+    .profile-data {
+      cursor: pointer;
+    }
+
+  }
 }
 
-.main-section, .messages-section {
+section {
   background-color: $panel-color;
   height: 100%;
+  .stats { margin-top: 60px; }
 }
+
+.messages-list {
+  padding: 10px;
+}
+
+.quest {
+  padding: 10px;
+  margin: 10px;
+  .media-button {
+    margin-left: auto;
+    background-color: $panel-color;
+    width: 380px;
+    padding: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    cursor: pointer;
+    span {
+      margin: auto;
+    }
+  }
+}
+
+
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1b025e+0,1b025e+38,7380d6+100 */

@@ -12,5 +12,22 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+
+
+$(function() {
+  $('#progress-circle-1').circleProgress({
+        value: 0.25,
+        size: 100
+  });
+
+  $('#progress-circle-2').circleProgress({
+        value: 0.45,
+        size: 100
+  });
+
+  $('#progress-circle-3').circleProgress({
+        value: 0.75,
+        size: 100
+  });
+});
